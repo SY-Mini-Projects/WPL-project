@@ -74,11 +74,35 @@ header{
 }
 input[type=text] {
     float: right;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
+    padding: 8px;
+    margin-top: 0px;
+    margin-right: 200px;
     border: none;
-    font-size: 17px;
+    font-size: 25px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.text-box {
+  margin-top: 350px;
+  text-align: center;
+}
+
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px 34px;
+  font-size: 20px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover{
+  border: 1px solid orange;
+  background: orange;
 }
 /* Courses */   
 .course{
@@ -113,6 +137,11 @@ p{
     box-sizing: border-box;
     transition: 0.5s;
 }
+.course-col img{
+  height: 200px;
+  width:75% ;
+}
+
 h3{
     text-align: center;
     font-weight: 600;
@@ -129,18 +158,21 @@ h3{
 /* campus */
 .campus{
     width:80%;
-    margin:auto;
+    margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 10px;
+    row-gap: 2px;
 }
 .campus-col{
-    flex-basis: 32%;
+  height: 200px;
+    flex-basis: 15%;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     position: relative;
     overflow: hidden;
 }
 .campus-col img{
+    height: 100%;
     width: 100%;
     display: block;
 }
@@ -154,11 +186,11 @@ h3{
     transition: 0.5s;
 }
 .layer:hover{
-    background: rgba(164, 56, 150, 0.7);
+    background: orange;
 }
 .layer h3{
     width: 100%;
-    font-weight: 500;
+    font-weight: 300;
     color: white;
     font-size: 26px;
     bottom: 0;
