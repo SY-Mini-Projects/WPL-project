@@ -23,6 +23,7 @@
      padding: 0;
      margin: 0;
      box-sizing: border-box;
+     /* font-size: 12.8px; */
      font-family: "Poppins", sans-serif;
    }
    body {
@@ -123,13 +124,16 @@
 <body>
     <section class="sub-header">
         <div class="navbar">
-            <div class="logo">
+            <div class="logo" style="margin-top:50px; margin-right: 2px;">
                 <a href="home.html"><img src="eduford_img/logo.png"></a>
             </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search..">
+            <ul class="links">
+            <div class="search-container" style=" margin-top: 30px;">
+                <input type="text" placeholder="Search.." style="font-size: 25px;">
             </div>
-            <a href="signin.html" class="action_btn">Sign in</a>
+          </ul>
+            <a href="signin.html" class="action_btn sign" >Sign in</a>
+            <a href="login.html" class="action_btn login"> Login</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
