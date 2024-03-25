@@ -264,6 +264,36 @@ h3{
   padding-top: 100px;
   text-align: center;
 }
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+@keyframes slideInFromLeft {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromDown {
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .testimonial-col{
   flex-basis: 44%;
   border-radius: 10px;
@@ -273,6 +303,15 @@ h3{
   padding: 25px;
   cursor: pointer;
   display: flex;
+}
+/* .animateR {
+  animation: slideInFromRight 2s ease-out;
+}
+.animateL{
+  animation: slideInFromLeft 2s ease-out;
+} */
+.animateD{
+  animation: slideInFromDown 2s ease-out;
 }
 .testimonial-col img{
   height: 40px;

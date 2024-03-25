@@ -19,6 +19,37 @@
     <title>eduford</title>
     <script src="https://kit.fontawesome.com/410cc890ec.js" crossorigin="anonymous"></script>
 </head>
+<script>
+//     window.addEventListener('scroll', function() {
+//     const elements = document.querySelectorAll('.testimonial-col');
+
+//     elements.forEach(element => {
+//         const position = element.getBoundingClientRect();
+
+//         // check whether the element is in the viewport
+//         if(position.top >= 0 && position.bottom <= window.innerHeight) {
+//             element.classList.add('animateR');
+//         } else {
+//             element.classList.remove('animateR');
+//         }
+//     });
+// });
+
+window.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.testimonial-col');
+
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+
+        // check whether the element is in the viewport
+        if(position.top >= 0 && position.bottom <= window.innerHeight) {
+            element.classList.add('animateD');
+        } else {
+            element.classList.remove('animateD');
+        }
+    });
+});
+</script>
 <body>
     <section class="navbar-section">
         <div class="navbar">
@@ -166,7 +197,7 @@
         <h1>What our students says</h1>
         <p>lorem</p>
         <div class="row">
-            <div class="testimonial-col">
+            <div class="testimonial-col animateD">
                 <img src="eduford_img/user1.jpg" alt="user 1">
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iste, deserunt commodi autem maxime facilis ipsa iure obcaecati exercitationem nihil neque natus officia porro placeat quis quia culpa, dignissimos ab!</p>
@@ -178,7 +209,7 @@
                     <i class="fa fa-star-o" aria-hidden="true"></i>
                 </div>
             </div>
-            <div class="testimonial-col">
+            <div class="testimonial-col animateD">
                 <img src="eduford_img/user2.jpg" alt="user 1">
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iste, deserunt commodi autem maxime facilis ipsa iure obcaecati exercitationem nihil neque natus officia porro placeat quis quia culpa, dignissimos ab!</p>
