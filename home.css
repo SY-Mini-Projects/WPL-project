@@ -148,8 +148,16 @@ p{
     display:flex;
     justify-content: space-between;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+  margin-top: 0.9em;
+  text-align: center;
+}
 .course-col{
     flex-basis: 31%;
+    margin: 10px 0;
     background: #fff3f3;
     border-radius: 10px;
     margin-bottom: 5%;
