@@ -64,19 +64,19 @@
                 <div>
                     <i class="fa fa-envelope"></i>
                     <span>
-                        <h5>kaushal@gmail.com</h5>
+                        <h5>huzaifa.a@somaiya.edu</h5>
                         <p>Email us for query</p>
                     </span>
                 </div>
             </div>
             <div class="contact-col">
-                <form action="form-handler.php" method="post">
-                    <input type="text" placeholder="Enter your name" required>
-                    <input type="text" placeholder="Enter email" required>
-                    <input type="text" placeholder="Enter Subject" required>
-                    <textarea rows="8" placeholder="Message" required></textarea>
+                <form id="contact-form" action="http://localhost:3000/send-email" method="post">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="text" name="email" placeholder="Enter email" required>
+                    <input type="text" name="subject" placeholder="Enter Subject" required>
+                    <textarea rows="8" name="message" id="message" placeholder="Message" required></textarea>
                     <button type="submit" class="action_btn">Send message</button>
-                </form>
+                </form>        
             </div>
         </section>
     </div>
@@ -124,6 +124,35 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+        
+            fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'Email sent') {
+                    alert('Email sent!');
+                } else {
+                    alert('Failed to send email.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('An error occurred.');
+            });
+        });
+        </script>
 </body>
 
 </html>
