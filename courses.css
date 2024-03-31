@@ -200,7 +200,6 @@ input[type=text] {
     left: 0;
     width: 100%;
     background: linear-gradient(135deg, #FFA500, #FFFF00);
-    /* Vibrant gradient background with orange and yellow */
     padding: 20px;
     box-sizing: border-box;
     transition: 0.5s;
@@ -243,7 +242,15 @@ input[type=text] {
 .card-link:hover {
     color: #f8f9fa;
 }
-
+.list-group-item{
+    color: #000;
+}
+.card-title{
+    color: #000;
+}
+.card-text{
+    color: #000;
+}
 /* Footer */
 footer {
     width: 100%;
