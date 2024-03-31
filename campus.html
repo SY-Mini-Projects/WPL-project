@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="campus.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Campus</title>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="heading">
+            <h1>Campuses</h1>
+        </div>
+        <div class="container animate-on-scroll">
+            <div class="hero-content">
+                <h2>Welcome to our website</h2>
+                <p>Discover our colleges</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="hero-image">
+                <img src="eduford_img/tulas.jpeg">
+            </div>
+        </div>
+        <div class="container animate-on-scroll">
+            <div class="hero-image">
+                <img src="eduford_img/tulas.jpeg">
+            </div>
+            <div class="hero-content">
+                <h2>Welcome to our website</h2>
+                <p>Discover our colleges</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+        </div>
+        <!-- Add the "animate-on-scroll" class to elements you want to animate -->
+        <div class="container animate-on-scroll">
+            <div class="hero-content">
+                <h2>Welcome to our website</h2>
+                <p>Discover our colleges</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+            <div class="hero-image">
+                <img src="eduford_img/tulas.jpeg">
+            </div>
+        </div>
+
+    </section>
+    <script>
+        $(document).ready(function() {
+    $(window).scroll(function() {
+        $('.animate-on-scroll').each(function() {
+            var elementTop = $(this).offset().top;
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+            if (elementTop < viewportBottom) {
+                $(this).addClass('visible');
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+
+</html>
