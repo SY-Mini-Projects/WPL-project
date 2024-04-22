@@ -14,12 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'contact.html'));
+    res.sendFile(path.join(__dirname, 'contact.php'));
   });
 
   app.post('/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
-  
+
     try {
       await sendEmail(
         'huzaifa.a@somaiya.edu',
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
         `${subject}`,
         message
       );
-  
+
       res.json({ status: 'Email sent' });
     } catch (error) {
       console.error(error);
